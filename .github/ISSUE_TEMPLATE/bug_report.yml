@@ -1,0 +1,71 @@
+name: Bug Report
+description: 报告一个Bug或错误
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你报告Bug！请填写以下信息帮助我们定位问题。
+
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Bug类型
+      description: 这个Bug属于哪个类别？
+      options:
+        - 代码错误
+        - 文档错误
+        - 格式问题
+        - 链接失效
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: problem-number
+    attributes:
+      label: 题目编号
+      description: 如果Bug与特定题目相关，请提供题目编号
+      placeholder: "例如：1, 20, 136"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug描述
+      description: 请详细描述你发现的问题
+      placeholder: 描述Bug的具体表现
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 你期望的正确行为是什么？
+      placeholder: 描述期望的结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 如何复现这个Bug？
+      placeholder: |
+        1. 打开文件 '...'
+        2. 查看代码 '...'
+        3. 发现错误 '...'
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 其他相关信息
+      placeholder: 截图、错误信息等
+    validations:
+      required: false
