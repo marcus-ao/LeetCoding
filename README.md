@@ -13,6 +13,10 @@ LeetCoding/
 │   ├── 20. 有效的括号.md
 │   ├── 136. 只出现一次的数字.md
 │   └── ...
+├── answers/                # 题目个人解答代码文件
+│   ├── TwoSum_1.py
+|   ├── ValidParentheses_20.py
+|   ├── SingleNumber_136.py
 ├── analysis/               # 题目详细分析文档
 │   ├── 1-TwoSum-思路分析.md
 │   ├── 20-ValidParentheses-思路分析.md
