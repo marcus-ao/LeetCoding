@@ -193,20 +193,20 @@
 ```mermaid
 graph TD
     Start[开始遍历 nums] --> Init[初始化空 Map]
-    Init --> CheckLoop{还有元素吗?}
-    
-    CheckLoop -- No --> End[返回空/报错]
+    Init --> CheckLoop{还有元素吗}
+
+    CheckLoop -- No --> End[返回空或报错]
     CheckLoop -- Yes --> GetNum[获取当前 num 和 i]
-    
+
     GetNum --> CalcComp[计算 complement = target - num]
-    CalcComp --> CheckMap{Map 中有 complement?}
-    
-    CheckMap -- Yes (找到了!) --> Found[返回 [map[complement], i]]
+    CalcComp --> CheckMap{Map 中有 complement}
+
+    CheckMap -- Yes --> Found[返回 complement 对应索引 和 i]
     Found --> Finish((结束))
-    
-    CheckMap -- No (没找到) --> Store[存入 Map: map[num] = i]
+
+    CheckMap -- No --> Store[存入 Map num 对应 i]
     Store --> CheckLoop
-    
+
     style Found fill:#9f9,stroke:#333
     style CheckMap fill:#ff9,stroke:#333
 ```
