@@ -107,6 +107,7 @@ dmypy.json
 .project
 .cproject
 .settings/
+.sisyphus
 
 # OS
 Thumbs.db
