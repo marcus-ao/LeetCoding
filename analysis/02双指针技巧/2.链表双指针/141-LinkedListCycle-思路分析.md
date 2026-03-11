@@ -338,7 +338,7 @@ def hasCycle(head):
     返回:
         bool: 如果有环返回True，否则返回False
     """
-    # 边界情况：空链表或单节点链表无环
+    # 边界情况：空链表或单节点链表无环  (实际上该步骤冗余，下列while条件已包括空链表与单节点情况判别)
     if not head or not head.next:
         return False
     
